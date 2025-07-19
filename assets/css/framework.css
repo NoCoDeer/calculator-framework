@@ -1,0 +1,486 @@
+/* Общие стили для контейнера калькулятора */
+.cf-calculator__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* На десктопе: форма слева, результаты справа */
+@media (min-width: 768px) {
+    .cf-calculator__input {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .cf-calculator__output {
+        flex: 1;
+        min-width: 300px;
+    }
+}
+
+/* На мобильных устройствах: форма сверху, результаты снизу */
+@media (max-width: 767px) {
+    .cf-calculator__input,
+    .cf-calculator__output {
+        flex: 1 1 100%;
+    }
+}
+
+/* Стили для заголовков и секций */
+.cf-calculator__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cf-section {
+    margin-bottom: 30px;
+}
+
+.cf-section__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Стили для полей ввода */
+.cf-form-group {
+    margin-bottom: 15px;
+}
+
+.cf-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.cf-form-group input[type="number"],
+.cf-form-group input[type="date"],
+.cf-form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.cf-form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Стили для кнопок */
+.cf-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cf-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cf-button--primary {
+    background-color: #3C57EA;
+    color: white;
+}
+
+.cf-button--primary:hover {
+    background-color: #2A41C7;
+}
+
+.cf-button--secondary {
+    background-color: #E5E7EB;
+    color: #333;
+}
+
+.cf-button--secondary:hover {
+    background-color: #D1D5DB;
+}
+
+.cf-button--danger {
+    background-color: #FF4444;
+    color: white;
+}
+
+.cf-button--danger:hover {
+    background-color: #CC0000;
+}
+
+.cf-button--icon {
+    background: none;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cf-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: #666;
+}
+
+.cf-icon:hover {
+    color: #FF4444;
+}
+
+/* Стили для кнопок действий */
+.cf-action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Стили для форм пополнения и снятия */
+.cf-replenishment-form,
+.cf-withdrawal-form {
+    background-color: #F9FAFB;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.cf-form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Стили для списка транзакций */
+.cf-transaction-list {
+    margin-top: 20px;
+}
+
+.cf-transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #F9FAFB;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cf-transaction-item:hover {
+    background-color: #E5E7EB;
+}
+
+.cf-transaction-content {
+    flex-grow: 1;
+}
+
+.cf-transaction-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.cf-transaction-details {
+    display: flex;
+    gap: 10px;
+}
+
+.cf-transaction-detail {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Стили для сводки */
+.cf-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cf-summary__item {
+    flex: 1 1 200px;
+    background-color: #F9FAFB;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cf-summary__label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.cf-summary__value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Стили для кольцевой диаграммы */
+.cf-doughnut-chart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cf-doughnut {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.cf-doughnut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cf-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cf-legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.cf-legend-color--principal {
+    background-color: #3C57EA;
+}
+
+.cf-legend-color--interest {
+    background-color: #34C759;
+}
+
+.cf-legend-label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Стили для таблицы результатов */
+.cf-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cf-table th,
+.cf-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cf-table th {
+    background-color: #F9FAFB;
+    font-weight: 600;
+    color: #333;
+}
+
+.cf-table td {
+    color: #666;
+}
+
+/* Стили для подсказок */
+.cf-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.cf-tooltip .dashicons-info {
+    cursor: pointer;
+    color: #666;
+}
+
+.cf-tooltip .cf-tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cf-tooltip:hover .cf-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Стили для обязательных полей */
+.cf-required {
+    color: #FF4444;
+    font-weight: bold;
+}
+.cf-mode-toggle {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cf-mode-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.cf-mode-toggle input[type="radio"] {
+    margin: 0;
+}
+
+.cf-goals-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.cf-target-with-inflation,
+.cf-present-value {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.cf-contributions {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.cf-contributions p {
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cf-monthly-contribution {
+    background-color: #E6F7E9; /* Низкая сложность */
+}
+
+.cf-yearly-contribution {
+    background-color: #FFF3E0; /* Средняя сложность */
+}
+
+.cf-lump-sum {
+    background-color: #FFEBEE; /* Высокая сложность */
+}
+.cf-mode-toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cf-mode-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cf-mode-button--active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.cf-mode-button:hover {
+    background-color: #e0e0e0;
+}
+
+.cf-mode-button--active:hover {
+    background-color: #0056b3;
+}
+.cf-results__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cf-result-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.cf-result-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.cf-result-card:hover {
+    transform: translateY(-2px);
+}
+
+.cf-result-card--primary {
+    border-left-color: #28a745; /* Зеленый */
+}
+
+.cf-result-card--secondary {
+    border-left-color: #fd7e14; /* Оранжевый */
+}
+
+.cf-result-card--tertiary {
+    border-left-color: #dc3545; /* Красный */
+}
+
+.cf-result-card__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.cf-result-card__value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.cf-contributions__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cf-results__description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.5;
+}
