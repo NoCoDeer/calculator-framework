@@ -178,9 +178,11 @@ jQuery(document).ready(function($) {
         const data = { module: module, replenishments: [], withdrawals: [] };
 
         formData.forEach(item => {
-            if (!item.name.startsWith('replenishment_') && !item.name.startsWith('withdrawal_')) {
-                data[item.name] = item.value;
+            if (module === 'deposit' && (item.name.startsWith('replenishment_') || item.name.startsWith('withdrawal_'))) {
+                // Skip deposit transaction fields, they are processed separately
+                return;
             }
+            data[item.name] = item.value;
         });
 
         container.find('.cf-transaction-list .cf-transaction-item').each(function(index) {
