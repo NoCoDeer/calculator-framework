@@ -302,14 +302,11 @@ jQuery(document).ready(function($) {
         data.action = 'cf_calculate';
         data.nonce = cfAjax.nonce;
 
-        container.find('.cf-preloader').show();
-
         $.ajax({
             url: cfAjax.ajaxurl,
             type: 'POST',
             data: data,
             success: function(response) {
-                container.find('.cf-preloader').hide();
                 console.log('AJAX Success:', response);
                 if (response.success) {
                     const result = response.data;
@@ -320,7 +317,6 @@ jQuery(document).ready(function($) {
                 }
             },
             error: function(xhr, status, error) {
-                container.find('.cf-preloader').hide();
                 console.log('AJAX Error:', status, error);
                 alert(cfAjax.translations.ajax_error);
             }

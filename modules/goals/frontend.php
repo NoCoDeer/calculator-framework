@@ -101,7 +101,6 @@ if ($enabled) : ?>
             <?php _e('With this calculator, you can calculate how much money you need to invest or save to achieve any financial goal by a specific date.', 'calculator-framework'); ?>
         </p>
     </div>
-    <div class="cf-preloader"></div>
 </div>
     </div>
 </div>
