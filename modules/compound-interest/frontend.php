@@ -77,5 +77,6 @@ if ($enabled) : ?>
                 </table>
             </div>
         </div>
+        <div class="cf-preloader"></div>
     </div>
 </div>
