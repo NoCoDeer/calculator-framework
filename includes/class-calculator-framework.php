@@ -63,8 +63,14 @@ class Calculator_Framework {
                     'interest' => get_option('cf_chart_interest_color', '#34C759'),
                     'total' => get_option('cf_chart_total_color', '#00C4B4'),
                 ),
+                'preloader_icon' => esc_url(get_option('cf_preloader_icon')),
             ));
             wp_enqueue_style('cf-framework-css', CF_PLUGIN_URL . 'assets/css/framework.css', array(), '1.0.0');
+
+            $custom_css = trim(get_option('cf_custom_css'));
+            if ($custom_css !== '') {
+                wp_add_inline_style('cf-framework-css', $custom_css);
+            }
         } else {
             error_log('Assets not enqueued: No calculator shortcode found');
         }

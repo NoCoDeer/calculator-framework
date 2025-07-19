@@ -38,6 +38,10 @@ public function register_settings() {
     register_setting('cf_settings_group', 'cf_chart_principal_color');
     register_setting('cf_settings_group', 'cf_chart_interest_color');
     register_setting('cf_settings_group', 'cf_chart_total_color');
+
+    // Custom CSS and preloader icon settings
+    register_setting('cf_settings_group', 'cf_custom_css');
+    register_setting('cf_settings_group', 'cf_preloader_icon');
 }
 
     public function render_admin_page() {
@@ -69,6 +73,17 @@ public function register_settings() {
                     <input type="color" name="cf_chart_total_color" id="cf_chart_total_color" value="<?php echo esc_attr(get_option('cf_chart_total_color', '#00C4B4')); ?>">
                 </p>
 
+                <h2><?php _e('Custom CSS', 'calculator-framework'); ?></h2>
+                <p>
+                    <textarea name="cf_custom_css" id="cf_custom_css" rows="5" class="large-text"><?php echo esc_textarea(get_option('cf_custom_css')); ?></textarea>
+                </p>
+
+                <h2><?php _e('Preloader Icon', 'calculator-framework'); ?></h2>
+                <p>
+                    <input type="text" name="cf_preloader_icon" id="cf_preloader_icon" value="<?php echo esc_attr(get_option('cf_preloader_icon')); ?>" class="regular-text">
+                    <button type="button" class="button" id="cf_preloader_icon_button"><?php _e('Select or Upload Image', 'calculator-framework'); ?></button>
+                </p>
+
                 <?php
                 foreach ($framework->get_modules() as $module) {
                     echo '<h2>' . esc_html($module->get_name()) . '</h2>';
@@ -86,6 +101,24 @@ public function register_settings() {
                 submit_button();
                 ?>
             </form>
+            <?php wp_enqueue_media(); ?>
+            <script type="text/javascript">
+            jQuery(document).ready(function($){
+                $('#cf_preloader_icon_button').on('click', function(e){
+                    e.preventDefault();
+                    const frame = wp.media({
+                        title: '<?php echo esc_js(__('Select or Upload Preloader Icon', 'calculator-framework')); ?>',
+                        button: { text: '<?php echo esc_js(__('Use this image', 'calculator-framework')); ?>' },
+                        multiple: false
+                    });
+                    frame.on('select', function(){
+                        const attachment = frame.state().get('selection').first().toJSON();
+                        $('#cf_preloader_icon').val(attachment.url);
+                    });
+                    frame.open();
+                });
+            });
+            </script>
         </div>
         <?php
     }
