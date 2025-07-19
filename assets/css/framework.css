@@ -1,5 +1,6 @@
 /* Общие стили для контейнера калькулятора */
 .cf-calculator__container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -483,4 +484,36 @@
     color: #666;
     margin-top: 20px;
     line-height: 1.5;
+}
+
+/* Spinner */
+.cf-preloader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+
+.cf-preloader::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border: 4px solid #3C57EA;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: cf-spin 1s linear infinite;
+}
+
+@keyframes cf-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }

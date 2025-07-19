@@ -55,4 +55,5 @@ if ($enabled) : ?>
             <tbody></tbody>
         </table>
     </div>
+    <div class="cf-preloader"></div>
 </div>
