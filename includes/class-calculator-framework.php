@@ -34,7 +34,8 @@ class Calculator_Framework {
             error_log('Enqueuing assets for calculator');
             wp_enqueue_script('jquery');
             wp_enqueue_script('chart-js', CF_PLUGIN_URL . 'vendor/chart.js', array(), '4.4.0', true);
-            wp_enqueue_script('cf-framework-js', CF_PLUGIN_URL . 'assets/js/framework.js', array('jquery', 'chart-js'), '1.0.0', true);
+            wp_enqueue_script('html2pdf-js', CF_PLUGIN_URL . 'vendor/html2pdf.bundle.min.js', array(), '0.9.3', true);
+            wp_enqueue_script('cf-framework-js', CF_PLUGIN_URL . 'assets/js/framework.js', array('jquery', 'chart-js', 'html2pdf-js'), '1.0.0', true);
             wp_localize_script('cf-framework-js', 'cfAjax', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('cf_calculate_nonce'),
