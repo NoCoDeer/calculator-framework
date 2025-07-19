@@ -100,6 +100,7 @@ if ($enabled) : ?>
         <p class="cf-results__description">
             <?php _e('With this calculator, you can calculate how much money you need to invest or save to achieve any financial goal by a specific date.', 'calculator-framework'); ?>
         </p>
+        <button type="button" class="cf-button cf-download-pdf"><?php _e('Download PDF', 'calculator-framework'); ?></button>
     </div>
 </div>
     </div>

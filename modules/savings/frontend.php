@@ -74,6 +74,7 @@ if ($enabled) : ?>
                     </thead>
                     <tbody></tbody>
                 </table>
+                <button type="button" class="cf-button cf-download-pdf"><?php _e('Download PDF', 'calculator-framework'); ?></button>
             </div>
         </div>
     </div>

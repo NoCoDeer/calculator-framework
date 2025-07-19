@@ -67,6 +67,21 @@ jQuery(document).ready(function($) {
         performCalculation(container);
     }
 
+    function downloadPDF(container) {
+        const results = container.find('.cf-results')[0];
+        if (!results) {
+            return;
+        }
+        const opt = {
+            margin: 10,
+            filename: 'calculator-results.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(results).save();
+    }
+
     function renderBarChart(chartCanvas, result) {
         const ctx = chartCanvas.getContext('2d');
         const datasets = [
@@ -580,6 +595,11 @@ function displayResults(container, result) {
             if (container.find('#capitalize').length) {
                 toggleCapitalizationFrequency(container);
             }
+        });
+
+        container.find('.cf-download-pdf').on('click', function(e) {
+            e.preventDefault();
+            downloadPDF(container);
         });
     });
 });
