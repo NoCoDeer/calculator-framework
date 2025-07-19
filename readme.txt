@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Calculator Framework is a modular plugin that provides several financial calculators for WordPress. It includes modules for compound interest, deposit growth, savings planning and financial goals. Charts are rendered using the bundled Chart.js library.
+Calculator Framework is a modular plugin that provides several financial calculators for WordPress. It includes modules for compound interest, deposit growth, savings planning and financial goals. Charts are rendered using the bundled Chart.js library. Results can be downloaded as a PDF for easy sharing or record-keeping.
 
 == Installation ==
 1. Upload the plugin to the `/wp-content/plugins/` directory or install it via the WordPress plugin screen.
