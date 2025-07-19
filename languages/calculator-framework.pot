@@ -1,0 +1,651 @@
+# Copyright (C) 2025 szhigimont
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Calculator Framework 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/calculator-framework\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-19T20:10:52+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: calculator-framework\n"
+
+#. Plugin Name of the plugin
+#: calculator-framework.php
+msgid "Calculator Framework"
+msgstr ""
+
+#. Description of the plugin
+#: calculator-framework.php
+msgid "A modular framework for creating calculators in WordPress. Includes Chart.js (MIT License) for chart rendering."
+msgstr ""
+
+#. Author of the plugin
+#: calculator-framework.php
+msgid "szhigimont"
+msgstr ""
+
+#. Author URI of the plugin
+#: calculator-framework.php
+msgid "https://t.me/szhigimont"
+msgstr ""
+
+#: includes/class-admin.php:10
+#: includes/class-admin.php:46
+#: includes/class-admin.php:51
+msgid "Calculator Framework Settings"
+msgstr ""
+
+#: includes/class-admin.php:11
+msgid "Calculators"
+msgstr ""
+
+#: includes/class-admin.php:21
+#: includes/class-admin.php:22
+#: includes/class-admin.php:96
+msgid "Shortcode Guide"
+msgstr ""
+
+#: includes/class-admin.php:46
+msgid "No calculator modules are available."
+msgstr ""
+
+#: includes/class-admin.php:58
+msgid "Chart Colors"
+msgstr ""
+
+#: includes/class-admin.php:60
+msgid "Principal Color"
+msgstr ""
+
+#: includes/class-admin.php:64
+msgid "Interest Color"
+msgstr ""
+
+#: includes/class-admin.php:68
+msgid "Total Color"
+msgstr ""
+
+#: includes/class-admin.php:78
+msgid "Enable Calculator"
+msgstr ""
+
+#: includes/class-admin.php:97
+msgid "Below is a list of available shortcodes for the Calculator Framework plugin, along with their descriptions and usage instructions."
+msgstr ""
+
+#: includes/class-admin.php:99
+msgid "Available Shortcodes"
+msgstr ""
+
+#: includes/class-admin.php:103
+msgid "Displays the Compound Interest Calculator. Use this shortcode to allow users to calculate compound interest with options for initial investment, interest rate, time, compounding frequency, and replenishment."
+msgstr ""
+
+#: includes/class-admin.php:104
+#: includes/class-admin.php:109
+#: includes/class-admin.php:114
+#: includes/class-admin.php:119
+msgid "Example:"
+msgstr ""
+
+#: includes/class-admin.php:108
+msgid "Displays the Savings Calculator. Use this shortcode to allow users to calculate savings growth with options for initial investment, monthly deposits, interest rate, and time."
+msgstr ""
+
+#: includes/class-admin.php:113
+msgid "Displays the Deposit Calculator. Use this shortcode to allow users to calculate deposit growth with options for deposit amount, term, interest rate, capitalization, replenishments, and withdrawals."
+msgstr ""
+
+#: includes/class-admin.php:118
+msgid "Displays the Goals Calculator. Use this shortcode to allow users to calculate the amount needed to achieve financial goals, either through savings or passive income, considering inflation, return rate, and initial capital."
+msgstr ""
+
+#: includes/class-admin.php:123
+msgid "Usage Instructions"
+msgstr ""
+
+#: includes/class-admin.php:124
+msgid "1. Insert the desired shortcode into any page or post where you want the calculator to appear."
+msgstr ""
+
+#: includes/class-admin.php:125
+msgid "2. Ensure the calculator is enabled in the Calculator Framework Settings."
+msgstr ""
+
+#: includes/class-admin.php:126
+msgid "3. Customize the appearance and behavior of the calculators using the settings on the main settings page."
+msgstr ""
+
+#: includes/class-calculator-framework.php:42
+#: modules/deposit/frontend.php:180
+msgid "Replenishment"
+msgstr ""
+
+#: includes/class-calculator-framework.php:43
+#: modules/deposit/frontend.php:181
+msgid "Withdrawal"
+msgstr ""
+
+#: includes/class-calculator-framework.php:44
+msgid "Please fill in all required fields with valid values."
+msgstr ""
+
+#: includes/class-calculator-framework.php:45
+msgid "Error"
+msgstr ""
+
+#: includes/class-calculator-framework.php:46
+msgid "Calculation failed."
+msgstr ""
+
+#: includes/class-calculator-framework.php:47
+msgid "An error occurred while processing your request."
+msgstr ""
+
+#: includes/class-calculator-framework.php:48
+msgid "Investment"
+msgstr ""
+
+#: includes/class-calculator-framework.php:49
+msgid "Interest"
+msgstr ""
+
+#: includes/class-calculator-framework.php:50
+msgid "Total"
+msgstr ""
+
+#: includes/class-calculator-framework.php:51
+msgid "Required Investment"
+msgstr ""
+
+#: includes/class-calculator-framework.php:52
+msgid "Required Interest"
+msgstr ""
+
+#: includes/class-calculator-framework.php:53
+msgid "Required Total"
+msgstr ""
+
+#: includes/class-calculator-framework.php:54
+#: includes/class-calculator-framework.php:55
+#, php-format
+msgid "Investing %s per month is %s to reach the target amount."
+msgstr ""
+
+#: includes/class-calculator-framework.php:56
+msgid "insufficient"
+msgstr ""
+
+#: includes/class-calculator-framework.php:57
+msgid "sufficient"
+msgstr ""
+
+#: includes/class-calculator-framework.php:58
+#: modules/savings/frontend.php:28
+msgid "Years"
+msgstr ""
+
+#: includes/class-calculator-framework.php:59
+msgid "Amount"
+msgstr ""
+
+#: includes/class-calculator-framework.php:115
+msgid "Nonce verification failed"
+msgstr ""
+
+#: includes/class-calculator-framework.php:121
+msgid "Invalid calculator module"
+msgstr ""
+
+#: includes/class-calculator-framework.php:137
+msgid "Calculation failed"
+msgstr ""
+
+#: modules/compound-interest/admin.php:2
+#: modules/deposit/admin.php:3
+#: modules/goals/admin.php:2
+#: modules/loan/admin.php:2
+#: modules/savings/admin.php:3
+msgid "Hide Title"
+msgstr ""
+
+#: modules/compound-interest/class-compound-interest.php:4
+#: modules/compound-interest/frontend.php:12
+msgid "Compound Interest Calculator"
+msgstr ""
+
+#: modules/compound-interest/class-compound-interest.php:123
+#: modules/loan/class-loan.php:57
+#: modules/savings/class-savings.php:80
+#, php-format
+msgid "Year %d"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:16
+msgid "Compound Interest Calculator is disabled."
+msgstr ""
+
+#: modules/compound-interest/frontend.php:21
+msgid "Initial Investment"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:25
+#: modules/loan/frontend.php:23
+msgid "Annual Interest Rate (%)"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:29
+msgid "Time (Years)"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:33
+msgid "Compounding Frequency"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:35
+#: modules/compound-interest/frontend.php:44
+#: modules/deposit/frontend.php:60
+#: modules/deposit/frontend.php:85
+#: modules/deposit/frontend.php:113
+#: modules/goals/frontend.php:91
+msgid "Yearly"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:36
+#: modules/compound-interest/frontend.php:45
+#: modules/deposit/frontend.php:59
+#: modules/deposit/frontend.php:83
+#: modules/deposit/frontend.php:111
+msgid "Quarterly"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:37
+#: modules/compound-interest/frontend.php:46
+#: modules/deposit/frontend.php:58
+#: modules/deposit/frontend.php:81
+#: modules/deposit/frontend.php:109
+#: modules/goals/frontend.php:87
+msgid "Monthly"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:41
+#: modules/deposit/frontend.php:78
+msgid "Replenishment Frequency"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:43
+msgid "No Replenishment"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:50
+#: modules/deposit/frontend.php:93
+msgid "Replenishment Amount"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:54
+#: modules/deposit/frontend.php:135
+#: modules/goals/frontend.php:63
+#: modules/loan/frontend.php:32
+#: modules/savings/frontend.php:48
+msgid "Reset"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:55
+#: modules/deposit/frontend.php:136
+#: modules/goals/frontend.php:64
+#: modules/loan/frontend.php:31
+#: modules/savings/frontend.php:49
+msgid "Calculate"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:61
+msgid "Amount and Term"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:62
+#: modules/deposit/frontend.php:149
+#: modules/savings/frontend.php:56
+msgid "Final Amount"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:63
+msgid "Capital Growth Chart"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:65
+msgid "Calculation Table"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:69
+#: modules/deposit/frontend.php:33
+#: modules/loan/frontend.php:48
+#: modules/savings/frontend.php:68
+msgid "Year"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:70
+#: modules/savings/frontend.php:69
+msgid "Your Investment"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:71
+#: modules/savings/frontend.php:70
+msgid "Total Interest"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:72
+#: modules/savings/frontend.php:71
+msgid "Total Income"
+msgstr ""
+
+#: modules/compound-interest/frontend.php:73
+#: modules/savings/frontend.php:72
+msgid "Final Balance"
+msgstr ""
+
+#: modules/deposit/class-deposit.php:4
+#: modules/deposit/frontend.php:12
+msgid "Deposit Calculator"
+msgstr ""
+
+#: modules/deposit/frontend.php:16
+msgid "Deposit Calculator is disabled."
+msgstr ""
+
+#: modules/deposit/frontend.php:22
+#: modules/deposit/frontend.php:145
+#: modules/deposit/frontend.php:166
+msgid "Deposit Amount"
+msgstr ""
+
+#: modules/deposit/frontend.php:26
+msgid "Term"
+msgstr ""
+
+#: modules/deposit/frontend.php:30
+msgid "Term Unit"
+msgstr ""
+
+#: modules/deposit/frontend.php:32
+msgid "Month"
+msgstr ""
+
+#: modules/deposit/frontend.php:37
+msgid "Start Date"
+msgstr ""
+
+#: modules/deposit/frontend.php:41
+msgid "Interest Rate (%)"
+msgstr ""
+
+#: modules/deposit/frontend.php:47
+msgid "Capitalize Interest"
+msgstr ""
+
+#: modules/deposit/frontend.php:50
+msgid "Capitalization of interest is a form of interest payment on a deposit where the accrued interest is added to the principal amount of the deposit, meaning the initial deposit is regularly increased by the amount of accrued interest, and subsequent interest is calculated on the increased amount."
+msgstr ""
+
+#: modules/deposit/frontend.php:55
+msgid "Capitalization Frequency"
+msgstr ""
+
+#: modules/deposit/frontend.php:57
+msgid "Daily"
+msgstr ""
+
+#: modules/deposit/frontend.php:61
+msgid "At the End of Term"
+msgstr ""
+
+#: modules/deposit/frontend.php:68
+msgid "Replenishments and Withdrawals"
+msgstr ""
+
+#: modules/deposit/frontend.php:70
+#: modules/deposit/frontend.php:76
+msgid "Add Replenishment"
+msgstr ""
+
+#: modules/deposit/frontend.php:71
+#: modules/deposit/frontend.php:104
+msgid "Add Withdrawal"
+msgstr ""
+
+#: modules/deposit/frontend.php:80
+#: modules/deposit/frontend.php:108
+msgid "One-Time"
+msgstr ""
+
+#: modules/deposit/frontend.php:82
+#: modules/deposit/frontend.php:110
+msgid "Every 2 Months"
+msgstr ""
+
+#: modules/deposit/frontend.php:84
+#: modules/deposit/frontend.php:112
+msgid "Semiannually"
+msgstr ""
+
+#: modules/deposit/frontend.php:89
+msgid "Replenishment Date"
+msgstr ""
+
+#: modules/deposit/frontend.php:97
+#: modules/deposit/frontend.php:125
+msgid "Cancel"
+msgstr ""
+
+#: modules/deposit/frontend.php:98
+#: modules/deposit/frontend.php:126
+msgid "Add"
+msgstr ""
+
+#: modules/deposit/frontend.php:106
+msgid "Withdrawal Frequency"
+msgstr ""
+
+#: modules/deposit/frontend.php:117
+msgid "Withdrawal Date"
+msgstr ""
+
+#: modules/deposit/frontend.php:121
+msgid "Withdrawal Amount"
+msgstr ""
+
+#: modules/deposit/frontend.php:142
+msgid "Deposit Summary"
+msgstr ""
+
+#: modules/deposit/frontend.php:153
+#: modules/deposit/frontend.php:170
+#: modules/deposit/frontend.php:182
+msgid "Accrued Interest"
+msgstr ""
+
+#: modules/deposit/frontend.php:157
+msgid "Capital Growth"
+msgstr ""
+
+#: modules/deposit/frontend.php:174
+msgid "Interest Accrual Table"
+msgstr ""
+
+#: modules/deposit/frontend.php:178
+msgid "No."
+msgstr ""
+
+#: modules/deposit/frontend.php:179
+msgid "Date"
+msgstr ""
+
+#: modules/deposit/frontend.php:183
+msgid "Balance"
+msgstr ""
+
+#: modules/goals/class-goals.php:4
+#: modules/goals/frontend.php:12
+msgid "Goals Calculator"
+msgstr ""
+
+#: modules/goals/frontend.php:16
+msgid "Goals Calculator is disabled."
+msgstr ""
+
+#: modules/goals/frontend.php:21
+msgid "Savings"
+msgstr ""
+
+#: modules/goals/frontend.php:22
+msgid "Passive Income"
+msgstr ""
+
+#: modules/goals/frontend.php:29
+#: modules/savings/frontend.php:21
+#: modules/savings/frontend.php:57
+msgid "Target Amount"
+msgstr ""
+
+#: modules/goals/frontend.php:37
+msgid "Desired Monthly Passive Income"
+msgstr ""
+
+#: modules/goals/frontend.php:45
+msgid "Number of Years"
+msgstr ""
+
+#: modules/goals/frontend.php:49
+msgid "Average Annual Inflation Rate (%)"
+msgstr ""
+
+#: modules/goals/frontend.php:53
+msgid "Average Annual Return Rate (%)"
+msgstr ""
+
+#: modules/goals/frontend.php:57
+msgid "Initial Capital"
+msgstr ""
+
+#: modules/goals/frontend.php:74
+msgid "Target with Inflation"
+msgstr ""
+
+#: modules/goals/frontend.php:78
+msgid "Equivalent Today"
+msgstr ""
+
+#: modules/goals/frontend.php:84
+msgid "To Achieve Your Goal, You Need to Contribute:"
+msgstr ""
+
+#: modules/goals/frontend.php:95
+msgid "Lump Sum"
+msgstr ""
+
+#: modules/goals/frontend.php:101
+msgid "With this calculator, you can calculate how much money you need to invest or save to achieve any financial goal by a specific date."
+msgstr ""
+
+#: modules/loan/class-loan.php:4
+#: modules/loan/frontend.php:12
+msgid "Loan Calculator"
+msgstr ""
+
+#: modules/loan/frontend.php:16
+msgid "Loan Calculator is disabled."
+msgstr ""
+
+#: modules/loan/frontend.php:19
+msgid "Loan Amount"
+msgstr ""
+
+#: modules/loan/frontend.php:27
+msgid "Loan Term (Years)"
+msgstr ""
+
+#: modules/loan/frontend.php:37
+msgid "Loan Details"
+msgstr ""
+
+#: modules/loan/frontend.php:39
+msgid "Total Payment"
+msgstr ""
+
+#: modules/loan/frontend.php:42
+msgid "Repayment Chart"
+msgstr ""
+
+#: modules/loan/frontend.php:44
+msgid "Repayment Table"
+msgstr ""
+
+#: modules/loan/frontend.php:49
+msgid "Principal Paid"
+msgstr ""
+
+#: modules/loan/frontend.php:50
+msgid "Interest Paid"
+msgstr ""
+
+#: modules/loan/frontend.php:51
+msgid "Total Paid"
+msgstr ""
+
+#: modules/loan/frontend.php:52
+msgid "Remaining Balance"
+msgstr ""
+
+#: modules/savings/class-savings.php:4
+#: modules/savings/frontend.php:12
+msgid "Savings Calculator"
+msgstr ""
+
+#: modules/savings/class-savings.php:98
+#, php-format
+msgid "Year %.1f"
+msgstr ""
+
+#: modules/savings/frontend.php:16
+msgid "Savings Calculator is disabled."
+msgstr ""
+
+#: modules/savings/frontend.php:25
+msgid "Calculate By"
+msgstr ""
+
+#: modules/savings/frontend.php:27
+msgid "Months"
+msgstr ""
+
+#: modules/savings/frontend.php:32
+msgid "Savings Period"
+msgstr ""
+
+#: modules/savings/frontend.php:36
+msgid "Current Amount Saved"
+msgstr ""
+
+#: modules/savings/frontend.php:40
+msgid "Monthly Investment"
+msgstr ""
+
+#: modules/savings/frontend.php:44
+msgid "Expected Return (%)"
+msgstr ""
+
+#: modules/savings/frontend.php:55
+msgid "Savings Summary"
+msgstr ""
+
+#: modules/savings/frontend.php:58
+msgid "Savings Growth Chart"
+msgstr ""
+
+#: modules/savings/frontend.php:64
+msgid "Savings Table"
+msgstr ""
