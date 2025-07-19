@@ -46,7 +46,13 @@ add_action('plugins_loaded', 'cf_init');
 
 // Add defer attribute to specific scripts
 function cf_add_defer_attribute($tag, $handle) {
-    if (in_array($handle, ['chart-js', 'cf-framework-js'])) {
+    $defer_scripts = [
+        'chart-js',
+        'html2canvas',
+        'jspdf',
+        'cf-framework-js',
+    ];
+    if (in_array($handle, $defer_scripts, true)) {
         return str_replace(' src', ' defer="defer" src', $tag);
     }
     return $tag;

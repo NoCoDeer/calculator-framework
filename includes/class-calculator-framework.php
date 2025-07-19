@@ -34,7 +34,21 @@ class Calculator_Framework {
             error_log('Enqueuing assets for calculator');
             wp_enqueue_script('jquery');
             wp_enqueue_script('chart-js', CF_PLUGIN_URL . 'vendor/chart.js', array(), '4.4.0', true);
-            wp_enqueue_script('cf-framework-js', CF_PLUGIN_URL . 'assets/js/framework.js', array('jquery', 'chart-js'), '1.0.0', true);
+            wp_enqueue_script(
+                'html2canvas',
+                'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
+                array(),
+                '1.4.1',
+                true
+            );
+            wp_enqueue_script(
+                'jspdf',
+                'https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js',
+                array(),
+                '2.5.1',
+                true
+            );
+            wp_enqueue_script('cf-framework-js', CF_PLUGIN_URL . 'assets/js/framework.js', array('jquery', 'chart-js', 'html2canvas', 'jspdf'), '1.0.0', true);
             wp_localize_script('cf-framework-js', 'cfAjax', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('cf_calculate_nonce'),
